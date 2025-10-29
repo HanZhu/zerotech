@@ -883,26 +883,26 @@ body {
     font-weight: 700;
 }
 
-/* Partner Section */
-.partner {
+/* Contact Section */
+.contact {
     padding: var(--spacing-24) 0;
     background: var(--gray-50);
 }
 
-.partner-content {
+.contact-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-.partner-text {
+.contact-text {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-6);
     margin-bottom: var(--spacing-10);
 }
 
-.partner-description {
+.contact-description {
     font-size: var(--font-size-xl);
     color: var(--text-primary);
     line-height: 1.6;
@@ -910,14 +910,14 @@ body {
     font-weight: 500;
 }
 
-.partner-cta {
+.contact-cta {
     font-size: var(--font-size-lg);
     color: var(--text-secondary);
     line-height: 1.6;
     margin: 0;
 }
 
-.partner-button {
+.contact-button {
     display: flex;
     justify-content: center;
 }
