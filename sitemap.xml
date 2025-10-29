@@ -6,7 +6,7 @@
     
     <!-- Homepage -->
     <url>
-        <loc>https://zerotech.ai/</loc>
+        <loc>https://zerotech.info/</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
     
     <!-- Vision Section -->
     <url>
-        <loc>https://zerotech.ai/#vision</loc>
+        <loc>https://zerotech.info/#vision</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -22,7 +22,7 @@
     
     <!-- Products Section -->
     <url>
-        <loc>https://zerotech.ai/#products</loc>
+        <loc>https://zerotech.info/#products</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -30,7 +30,7 @@
     
     <!-- Why Now Section -->
     <url>
-        <loc>https://zerotech.ai/#why-now</loc>
+        <loc>https://zerotech.info/#why-now</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -38,7 +38,7 @@
     
     <!-- Traction Section -->
     <url>
-        <loc>https://zerotech.ai/#traction</loc>
+        <loc>https://zerotech.info/#traction</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -46,7 +46,7 @@
     
     <!-- Team Section -->
     <url>
-        <loc>https://zerotech.ai/#team</loc>
+        <loc>https://zerotech.info/#team</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -54,7 +54,7 @@
     
     <!-- Partner Section -->
     <url>
-        <loc>https://zerotech.ai/#partner</loc>
+        <loc>https://zerotech.info/#contact</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -62,14 +62,14 @@
     
     <!-- Legal Pages -->
     <url>
-        <loc>https://zerotech.ai/terms.html</loc>
+        <loc>https://zerotech.info/terms.html</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
     
     <url>
-        <loc>https://zerotech.ai/privacy.html</loc>
+        <loc>https://zerotech.info/privacy.html</loc>
         <lastmod>2025-01-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>

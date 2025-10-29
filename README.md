@@ -129,7 +129,7 @@ For any questions or suggestions, please contact us through:
 
 - Email: hello@zerotech.ai
 - Phone: +1 (555) 123-4567
-- Website: https://zerotech.ai
+- Website: https://zerotech.info
 
 ---
 

@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://zerotech.ai/sitemap.xml
+Sitemap: https://zerotech.info/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
