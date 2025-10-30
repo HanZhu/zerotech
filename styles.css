@@ -530,6 +530,15 @@ body {
     font-weight: 500;
     color: var(--text-primary);
     letter-spacing: -0.02em;
+    line-height: 1.3;
+}
+
+.product-name {
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--accent-color), var(--success-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .product-description {
