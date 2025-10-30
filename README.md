@@ -7,7 +7,7 @@ Production-ready, minimalist company site for Zero Tech.
 - Website: https://zerotech.info
 - Status/Hosting: Vercel (auto-deploy from `main`)
 
-## What’s Included (current version)
+## What's Included (current version)
 
 - Pure static stack: HTML + CSS + Vanilla JS
 - Hero counters animation limited to Hero section; supports K+, M, and + suffixes
@@ -18,6 +18,8 @@ Production-ready, minimalist company site for Zero Tech.
 - Favicon: `Assets/ZeroTechLogo.png` (also Apple Touch Icon)
 - Legal pages: `terms.html`, `privacy.html`
 - SEO: comprehensive meta tags, Open Graph, Twitter, JSON‑LD (Organization, WebSite, BreadcrumbList), `robots.txt`, `sitemap.xml`
+- Product positioning: Zero Animate (AutoAE), Zero Portfolio (Corrra), Zero Studio (coming soon)
+- Product names styled with brand purple (#8c52ff) matching AutoAE logo
 
 ## Project Structure
 
