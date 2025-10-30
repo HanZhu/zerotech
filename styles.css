@@ -535,10 +535,7 @@ body {
 
 .product-name {
     font-weight: 600;
-    background: linear-gradient(135deg, var(--accent-color), var(--success-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #8c52ff;
 }
 
 .product-description {
