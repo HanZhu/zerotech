@@ -11,7 +11,7 @@ Production-ready, minimalist company site for Zero Tech.
 
 - Pure static stack: HTML + CSS + Vanilla JS
 - Hero counters animation limited to Hero section; supports K+, M, and + suffixes
-- Traction metrics: 215K+, 3.8M, 131K+; MRR card `$5K`
+- Traction metrics: 376K+, 3.8M, 191K+; 30%+ MRR MoM growth rate highlight
 - Team bios updated (Hanna CEO; Alex CMO, creator 60K subs, 3M+ views)
 - Navigation: Vision, Products, Why Now, Traction, Team, Contact
 - Footer: Investor Relations, Terms of Use, Privacy Policy, then social links (LinkedIn/X/YouTube/TikTok)
