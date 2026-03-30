@@ -11,7 +11,7 @@ Production-ready, minimalist company site for Zero Tech.
 
 - Pure static stack: HTML + CSS + Vanilla JS
 - Hero counters animation limited to Hero section; supports K+, M, and + suffixes
-- Traction metrics: 376K+, 3.8M, 191K+; 30%+ MRR MoM growth rate highlight
+- Traction metrics: 500K+, 11M+ organic views, 200K+ videos/month; 30% MRR MoM growth rate highlight
 - Team bios updated (Hanna CEO; Alex CMO, creator 60K subs, 3M+ views)
 - Navigation: Vision, Products, Why Now, Traction, Team, Contact
 - Footer: Investor Relations, Terms of Use, Privacy Policy, then social links (LinkedIn/X/YouTube/TikTok)
@@ -19,7 +19,7 @@ Production-ready, minimalist company site for Zero Tech.
 - Legal pages: `terms.html`, `privacy.html`
 - SEO: comprehensive meta tags, Open Graph, Twitter, JSON‑LD (Organization, WebSite, BreadcrumbList), `robots.txt`, `sitemap.xml`
 - Product positioning: Zero Animate (AutoAE), Zero Portfolio (Corrra), Zero Studio (coming soon)
-- Product names styled with brand purple (#8c52ff) matching AutoAE logo
+- Product names (AutoAE, Corrra) use white in titles for a unified look
 
 ## Project Structure
 

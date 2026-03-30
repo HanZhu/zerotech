@@ -53,17 +53,15 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop;
     });
 
-    // 导航栏背景透明度
+    // 导航栏背景（深色影院主题）
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        
         if (scrolled > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.background = 'rgba(0, 0, 0, 0.88)';
             navbar.style.backdropFilter = 'blur(20px)';
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
+            navbar.style.background = 'rgba(0, 0, 0, 0.65)';
+            navbar.style.backdropFilter = 'blur(16px)';
         }
     });
 });
@@ -278,7 +276,7 @@ function animateCounters() {
             if (current < target) {
                 current += increment;
                 let suffix = '';
-                if (hasM) suffix = 'M';
+                if (hasM) suffix = hasPlus ? 'M+' : 'M';
                 else if (hasK) suffix = 'K+';
                 else if (hasPlus) suffix = '+';
                 
@@ -294,7 +292,7 @@ function animateCounters() {
                 requestAnimationFrame(updateCounter);
             } else {
                 let suffix = '';
-                if (hasM) suffix = 'M';
+                if (hasM) suffix = hasPlus ? 'M+' : 'M';
                 else if (hasK) suffix = 'K+';
                 else if (hasPlus) suffix = '+';
                 
@@ -346,6 +344,31 @@ function animateProgressBars() {
     });
 }
 
+/** 蓝图式滚动显现（替代 framer-motion whileInView） */
+function initRevealOnScroll() {
+    document.querySelectorAll('.hero .reveal-on-scroll').forEach(function(el) {
+        el.classList.add('is-visible');
+    });
+
+    var rest = document.querySelectorAll('.section-cinematic:not(.hero) > .container');
+    rest.forEach(function(el) {
+        el.classList.add('reveal-on-scroll');
+    });
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    rest.forEach(function(el) {
+        observer.observe(el);
+    });
+}
+
 // 页面加载完成后初始化所有功能
 document.addEventListener('DOMContentLoaded', function() {
     enhanceFloatingCards();
@@ -354,6 +377,7 @@ document.addEventListener('DOMContentLoaded', function() {
     handleFormSubmission();
     animateCounters();
     animateProgressBars();
+    initRevealOnScroll();
     
     // 添加页面加载动画
     document.body.style.opacity = '0';
