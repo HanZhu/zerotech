@@ -195,6 +195,17 @@ body.legal-page .bar {
     opacity: 0.38;
 }
 
+.video-bg--fallback {
+    /* 当移动端禁止 autoplay 时，用静态氛围替代，避免播放 icon */
+    background:
+        radial-gradient(120% 70% at 50% 20%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.0) 55%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.92) 100%);
+}
+
+.video-bg--fallback video {
+    display: none !important;
+}
+
 .video-bg--desaturated video {
     filter: saturate(0);
 }

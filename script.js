@@ -369,6 +369,66 @@ function initRevealOnScroll() {
     });
 }
 
+// 移动端背景视频自动播放兜底：若被系统策略阻止则隐藏 video，避免出现播放 icon
+function initBackgroundVideos() {
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isSmallScreen = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+    const videos = document.querySelectorAll('.video-bg video');
+
+    const fallback = (video) => {
+        const parent = video.closest('.video-bg');
+        if (parent) parent.classList.add('video-bg--fallback');
+        video.pause();
+        video.removeAttribute('controls');
+        video.style.display = 'none';
+    };
+
+    videos.forEach((video) => {
+        // 强制满足 iOS/Safari autoplay 条件
+        video.muted = true;
+        video.defaultMuted = true;
+        video.playsInline = true;
+        video.setAttribute('muted', '');
+        video.setAttribute('playsinline', '');
+        video.setAttribute('webkit-playsinline', '');
+        video.removeAttribute('controls');
+
+        // 用户偏好减少动态效果时，直接走静态兜底
+        if (prefersReducedMotion) {
+            fallback(video);
+            return;
+        }
+
+        // 小屏优先尝试播放；失败则兜底，避免出现播放按钮/控件
+        if (!isSmallScreen) return;
+
+        const tryPlay = () => {
+            try {
+                const p = video.play();
+                if (p && typeof p.catch === 'function') {
+                    p.catch(() => fallback(video));
+                }
+            } catch (e) {
+                fallback(video);
+            }
+        };
+
+        if (video.readyState >= 2) tryPlay();
+        else video.addEventListener('loadeddata', tryPlay, { once: true });
+
+        // 某些设备会在后台/低电量暂停；若暂停且未手动播放过，直接兜底
+        video.addEventListener('pause', () => {
+            if (video.dataset.userPlayed === '1') return;
+            // 若真的在播放中 pause 不会触发；这里主要兜底“无法自动播放”的暂停态
+            fallback(video);
+        }, { once: true });
+
+        video.addEventListener('play', () => {
+            video.dataset.userPlayed = '1';
+        }, { once: true });
+    });
+}
+
 // 页面加载完成后初始化所有功能
 document.addEventListener('DOMContentLoaded', function() {
     enhanceFloatingCards();
@@ -378,6 +438,7 @@ document.addEventListener('DOMContentLoaded', function() {
     animateCounters();
     animateProgressBars();
     initRevealOnScroll();
+    initBackgroundVideos();
     
     // 添加页面加载动画
     document.body.style.opacity = '0';
