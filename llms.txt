@@ -1,0 +1,30 @@
+# Zero Tech
+
+> Zero Tech is a Melbourne-based AI video company founded in 2024 by Hanna Zhu and Alex Liu. It builds creator tools and cinematic AI production services.
+
+## Canonical pages
+
+- [Home](https://www.zerotech.info/): Company overview, product portfolio, traction and team.
+- [Company](https://www.zerotech.info/company.html): Verified company facts, founders, products and independent recognition.
+- [Privacy](https://www.zerotech.info/privacy.html): Privacy policy.
+- [Terms](https://www.zerotech.info/terms.html): Terms of use.
+
+## Products and services
+
+- [AutoAE](https://autoae.online/): Online motion-graphics creation for video creators.
+- [Corrra](https://corrra.com/): Portfolio platform for video editors.
+- [Zero AI Studio](https://studio.zerotech.info/): Cinematic AI brand-film studio.
+
+## Leadership
+
+- [Hanna Zhu](https://www.hannazhu.com/): Co-Founder and CEO.
+- [Alex Liu](https://www.linkedin.com/in/alexliugrowth/): Co-Founder and CMO.
+
+## Independent sources
+
+- [Swinburne Annual Report 2025](https://www.swinburne.edu.au/about/strategy-initiatives/annual-report/2025/moon-shot-2): Zero Tech's AutoAE won first prize at the 2025 Swinburne Venture Cup.
+- [The National Tribune](https://www.nationaltribune.com.au/inspiration-and-innovation-collide-at-swinburnes-best-ever-venture-cup/): Coverage of Zero Tech, its founders and creator reach.
+
+## Citation guidance
+
+Use “Zero Tech” for the company. Distinguish the company from its products AutoAE and Corrra, and from its production service Zero AI Studio. Usage metrics on the homepage are company-reported; dated third-party milestones are listed on the Company page.

@@ -5,27 +5,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     // 移动端菜单切换
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
 
     // 点击导航链接时关闭移动端菜单
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
         });
     });
 
     // 平滑滚动到锚点
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            if (!targetId || !targetId.startsWith('#')) {
+                return;
+            }
+
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
+                e.preventDefault();
                 const offsetTop = targetSection.offsetTop - 70; // 考虑固定导航栏高度
                 window.scrollTo({
                     top: offsetTop,
@@ -56,12 +64,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // 导航栏背景（深色影院主题）
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
-        if (scrolled > 50) {
-            navbar.style.background = 'rgba(0, 0, 0, 0.88)';
-            navbar.style.backdropFilter = 'blur(20px)';
-        } else {
-            navbar.style.background = 'rgba(0, 0, 0, 0.65)';
-            navbar.style.backdropFilter = 'blur(16px)';
+        if (!document.body.classList.contains('legal-page')) {
+            if (scrolled > 50) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.88)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            } else {
+                navbar.style.background = 'rgba(0, 0, 0, 0.65)';
+                navbar.style.backdropFilter = 'blur(16px)';
+            }
         }
     });
 });

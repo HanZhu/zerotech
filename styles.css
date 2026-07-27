@@ -138,6 +138,11 @@ body.legal-page {
     color: var(--text-primary);
 }
 
+body.company-page {
+    background: #000000;
+    color: var(--neutral-300);
+}
+
 body.legal-page .navbar {
     background: rgba(255, 255, 255, 0.94);
     border-bottom: 1px solid var(--gray-200);
@@ -158,6 +163,10 @@ body.legal-page .nav-link:hover {
 
 body.legal-page .bar {
     background: var(--text-primary);
+}
+
+body.legal-page > .footer {
+    background: #0a0a0a;
 }
 
 @media (max-width: 768px) {
@@ -515,6 +524,50 @@ body.legal-page .bar {
 .vision {
     padding: var(--spacing-24) 0;
     background: #000000;
+}
+
+/* Visible company definition */
+.company-summary {
+    padding: var(--spacing-20) 0;
+    background:
+        radial-gradient(80% 120% at 100% 0%, rgba(157, 138, 92, 0.13), transparent 60%),
+        #080808;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.company-summary-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: var(--spacing-16);
+    align-items: start;
+}
+
+.company-summary .section-title {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.company-summary-copy p {
+    color: var(--neutral-300);
+    font-size: clamp(var(--font-size-base), 1.7vw, var(--font-size-lg));
+    font-weight: 300;
+    line-height: 1.9;
+    margin-bottom: var(--spacing-6);
+}
+
+.company-summary a,
+.text-link {
+    color: #e4dcc8;
+    text-decoration-color: rgba(228, 220, 200, 0.35);
+    text-underline-offset: 0.2em;
+}
+
+.text-link {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .vision-content {
@@ -1022,6 +1075,13 @@ body.legal-page .bar {
     font-weight: 500;
 }
 
+.metrics-note {
+    margin: var(--spacing-6) 0 0;
+    color: var(--neutral-500);
+    font-size: var(--font-size-xs);
+    text-align: center;
+}
+
 /* Team Section */
 .team {
     padding: var(--spacing-24) 0;
@@ -1213,6 +1273,207 @@ body.legal-page .bar {
 
 .linkedin-link i {
     font-size: var(--font-size-lg);
+}
+
+.member-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-3);
+    margin-bottom: var(--spacing-4);
+}
+
+.member-links .linkedin-link {
+    margin-bottom: 0;
+}
+
+.member-site-link {
+    color: var(--studio-gold-light);
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    border-bottom: 1px solid var(--studio-gold-border);
+    padding-bottom: 0.15rem;
+}
+
+.member-site-link:hover {
+    color: #f5f0e6;
+    border-bottom-color: #f5f0e6;
+}
+
+/* Company profile page */
+.company-hero {
+    padding: 12rem 0 var(--spacing-24);
+    background:
+        radial-gradient(70% 80% at 75% 15%, rgba(157, 138, 92, 0.18), transparent 58%),
+        radial-gradient(55% 80% at 5% 80%, rgba(255, 255, 255, 0.07), transparent 65%),
+        #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.company-hero-inner {
+    max-width: 980px;
+}
+
+.company-hero h1 {
+    max-width: 900px;
+    margin: var(--spacing-4) 0 var(--spacing-8);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: clamp(3.1rem, 8vw, 6.5rem);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    line-height: 0.98;
+}
+
+.company-deck {
+    max-width: 760px;
+    color: var(--neutral-300);
+    font-size: clamp(var(--font-size-lg), 2.3vw, var(--font-size-2xl));
+    font-weight: 300;
+    line-height: 1.65;
+}
+
+.company-content {
+    padding: var(--spacing-20) 0 var(--spacing-24);
+    background: #050505;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin-bottom: var(--spacing-24);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.fact-card {
+    min-height: 150px;
+    padding: var(--spacing-6);
+    background: #0b0b0b;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-8);
+}
+
+.fact-label {
+    color: var(--neutral-500);
+    font-size: var(--font-size-xs);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.fact-card strong {
+    color: #fff;
+    font-size: var(--font-size-lg);
+    line-height: 1.35;
+}
+
+.company-section {
+    display: grid;
+    grid-template-columns: minmax(9rem, 0.35fr) minmax(0, 1fr);
+    column-gap: var(--spacing-12);
+    padding: var(--spacing-20) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.company-section > .overline {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+}
+
+.company-section > h2,
+.company-section > p:not(.overline),
+.company-section > div {
+    grid-column: 2;
+}
+
+.company-section h2 {
+    margin: 0 0 var(--spacing-8);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: clamp(var(--font-size-4xl), 5vw, var(--font-size-5xl));
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.company-section > p:not(.overline) {
+    max-width: 800px;
+    color: var(--neutral-300);
+    font-size: var(--font-size-lg);
+    font-weight: 300;
+    line-height: 1.85;
+}
+
+.portfolio-list,
+.founder-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-6);
+}
+
+.founder-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.portfolio-list article,
+.founder-list article {
+    padding: var(--spacing-8);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.portfolio-list h3,
+.founder-list h3,
+.recognition-list h3 {
+    margin-bottom: var(--spacing-4);
+    color: #fff;
+    font-size: var(--font-size-xl);
+}
+
+.portfolio-list p,
+.founder-list p,
+.recognition-list p {
+    margin-bottom: var(--spacing-6);
+    color: var(--neutral-300);
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.portfolio-list a,
+.founder-list a,
+.recognition-list a,
+.company-contact a {
+    color: var(--studio-gold-light);
+    text-decoration-color: var(--studio-gold-border);
+    text-underline-offset: 0.2em;
+}
+
+.source-links {
+    display: flex;
+    gap: var(--spacing-5);
+    flex-wrap: wrap;
+}
+
+.recognition-list article {
+    display: grid;
+    grid-template-columns: 6rem minmax(0, 1fr);
+    gap: var(--spacing-6);
+    padding: var(--spacing-8) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.recognition-list time {
+    color: var(--studio-gold-light);
+    font-family: var(--font-display);
+    font-size: var(--font-size-2xl);
+}
+
+.company-section .source-note {
+    margin-top: var(--spacing-8);
+    color: var(--neutral-500);
+    font-size: var(--font-size-sm);
 }
 
 .team-community {
@@ -1504,6 +1765,14 @@ body.legal-page .bar {
         flex-direction: column;
         text-align: center;
     }
+
+    .facts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .portfolio-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1641,6 +1910,36 @@ body.legal-page .bar {
         max-width: 100%;
         padding: var(--spacing-6);
     }
+
+    .company-summary-grid,
+    .company-section {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-6);
+    }
+
+    .company-summary .section-title {
+        text-align: center;
+    }
+
+    .company-summary-copy {
+        text-align: center;
+    }
+
+    .company-section > .overline,
+    .company-section > h2,
+    .company-section > p:not(.overline),
+    .company-section > div {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .founder-list {
+        grid-template-columns: 1fr;
+    }
+
+    .company-hero {
+        padding-top: 9rem;
+    }
 }
 
 @media (max-width: 640px) {
@@ -1676,6 +1975,14 @@ body.legal-page .bar {
     
     .nav-logo h2 {
         font-size: var(--font-size-lg);
+    }
+
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recognition-list article {
+        grid-template-columns: 1fr;
     }
     
     .hero {
